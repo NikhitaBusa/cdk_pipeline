@@ -18,13 +18,13 @@ from aws_cdk.pipelines import CodePipeline, CodePipelineSource, ShellStep
 from cdk_pipeline.pipeline_app_stage import MyPipelineAppStage
 # from aws_cdk.pipelines import ManualApprovalStep
 
-class MyPipelineStack(cdk.Stack):
+class CdkPipelineStack(cdk.Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         pipeline =  CodePipeline(self, "Pipeline", 
-                        pipeline_name="MyPipeline",
+                        pipeline_name="CdkPipeline",
                         synth=ShellStep("Synth", 
                             input=CodePipelineSource.git_hub("NikhitaBusa/CDK_PIPELINE", "main"),
                             commands=["npm install -g aws-cdk",

@@ -22,10 +22,10 @@
 
 import os
 import aws_cdk as cdk
-from cdk_pipeline.pipeline_stack import MyPipelineStack
+from cdk_pipeline.pipeline_stack import CdkPipelineStack
 
 app = cdk.App()
-MyPipelineStack(app, "MyPipelineStack", 
+CdkPipelineStack(app, "CdkPipelineStack", 
     env=cdk.Environment(account="246213974221", region="us-west-2")
 )
 
