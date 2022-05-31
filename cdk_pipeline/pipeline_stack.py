@@ -26,7 +26,7 @@ class CdkPipelineStack(cdk.Stack):
         pipeline =  CodePipeline(self, "Pipeline", 
                         pipeline_name="CdkPipeline",
                         synth=ShellStep("Synth", 
-                            input=CodePipelineSource.git_hub("NikhitaBusa/CDK_PIPELINE", "main"),
+                            input=CodePipelineSource.git_hub("NikhitaBusa/CDK_PIPELINE", "master"),
                             commands=["npm install -g aws-cdk",
                                 "python -m pip install -r requirements.txt",
                                 "cdk synth"]))
