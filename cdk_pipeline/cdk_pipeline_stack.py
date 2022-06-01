@@ -41,7 +41,7 @@ class AwsCdkPythonDevcontainerMainStack(Stack):
 
         # bucket = s3.Bucket(self, "TestNikhita667")
 
-        handler = lambda_.PythonFunction(self, "TestLambda",
+        handler = lambda_.PythonFunction(self, "TestLambdaPipeline",
                     entry="cdk_pipeline/lambda",
                     index="main.py",
                     handler="lambda_handler",
