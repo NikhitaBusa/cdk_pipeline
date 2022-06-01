@@ -26,4 +26,4 @@ def lambda_handler(event, context):
     statusCode = 200
     asyncio.run(main())
     print("--- %s seconds ---" % (time.time() - start_time))
-    return {"statusCode": statusCode, "headers": {}, "body": "HELLO NIKHITA!!"}
+    return {"statusCode": statusCode, "headers": {}, "body": "HELLO CDK PIPELINE!!"}
