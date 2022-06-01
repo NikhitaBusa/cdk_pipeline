@@ -45,7 +45,7 @@ class AwsCdkPythonDevcontainerMainStack(Stack):
                     entry="cdk_pipeline/lambda",
                     index="main.py",
                     handler="lambda_handler",
-                    function_name="TestLambda",
+                    function_name="TestLambdaPipeline",
                     runtime=awslambda.Runtime.PYTHON_3_7,
                     timeout=cdk.Duration.seconds(300),
                     environment={"ENV": "dev"}
